@@ -5,8 +5,14 @@ import torch.nn as nn
 from torch.utils.data import Dataset,DataLoader
 from word_bag import tokenize, stem, words_of_bag
 from model import NeuralN
+import time
 
-with open('intents.json','r') as f:
+start_time = time.time()
+elapsed_time = time.time() - start_time
+print(f"\rElapsed time: {elapsed_time:.1f} seconds", end="")
+time.sleep(1)
+
+with open('KB.json','r') as f:
     intents = json.load(f)
 
 all_words = []
@@ -101,3 +107,5 @@ data = {
 FILE = "data.pth"
 torch.save(data,FILE)
 print(f'Training Completed. File saved to {FILE}')
+elapsed_time = time.time() - start_time
+print(f"\nTotal execution time: {elapsed_time:.1f} seconds")

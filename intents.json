@@ -362,15 +362,6 @@
       ]
   },
   {
-      "tag": "i want to kill myself",
-      "patterns": [
-          "i want to kill myself"
-      ],
-      "responses": [
-          "helpline is available,you can contact the counsellor today:Befrienders Kenya helpline number is +254 722 178 177..always remember you mean something to someone."
-      ]
-  },
-  {
       "tag": "i am afraid i will fail again",
       "patterns": [
           "i am afraid i will fail again"
